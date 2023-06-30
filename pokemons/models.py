@@ -14,6 +14,7 @@ class Pokemon(models.Model):
     flavorText=models.CharField(max_length=400, null=True)
     small_images=models.JSONField(max_length=255, null=True)
     big_images=models.JSONField(max_length=255, null=True)
+    git_test=models.JSONField(max_length=255, null=True)
 
     def __str__(self):
         return f'{self.name}'
