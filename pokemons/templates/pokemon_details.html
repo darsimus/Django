@@ -1,0 +1,28 @@
+{% extends "master.html" %}
+
+{% block title %}
+    Details about {{ pokemon.name}}
+{% endblock %}
+
+{% block content %}
+
+<div class="w3-display-topmiddle w3-section w3-card-4 w3-row w3-padding w3-border w3-border-blue w3-green w3-center w3-round-xlarge w3-third">
+    <header class="w3-text-black"><h1>{{ pokemon.name}}</h1></header>
+    <p>Abilities:{{pokemon.abilities}} </p>
+    <p>Health:{{pokemon.hp}} </p>
+    <p>Type:{{pokemon.types}} </p>
+    <p>Weaknesses:{{pokemon.weaknesses}} </p>
+    <p>Resistances:{{pokemon.resistances}} </p>
+    <p>Artist:{{pokemon.artist}} </p>
+    <p>Rarity:{{pokemon.rarity}} </p> 
+    <img src='{{ pokemon.small_images}}'></img><br><br>
+    <button class="w3-btn w3-round-xxlarge w3-text-yellow w3-border w3-border-blue" onclick="window.open('{{ pokemon.big_images}}')">Open large image</button>
+     
+         
+    <footer class="w3-text-black"><h5><span class="w3-text-brown">Back to </span><a href="../pokemons" class="w3-hover-text-indigo w3-text-black">List of pokemons!</a></h5></footer>
+
+
+</div>
+
+
+{% endblock %}
